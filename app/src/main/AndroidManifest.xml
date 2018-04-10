@@ -16,6 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".three_boards_player_alone" />
+        <activity android:name=".three_boards_player_vs_anotherhumanplayer" />
+        <activity android:name=".five_boards_player_alone" />
+        <activity android:name=".five_boards_player_vs_anotherhumanplayer" />
+        <activity android:name=".scoreboardFor3x3SinglePlayer" />
+        <activity android:name=".chooseSides" />
+        <activity android:name=".scoreboardFor3x3TwoPlayer" />
+        <activity android:name=".scoreboardFor5x5SinglePlayer" />
+        <activity android:name=".chooseSides5x5" />
+        <activity android:name=".scoreboardFor5x5TwoPlayer"></activity>
     </application>
 
 </manifest>

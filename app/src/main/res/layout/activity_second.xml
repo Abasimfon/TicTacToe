@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/blacktictactoe" />
+
+
+    <TextView
+        android:id="@+id/settingsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:fontFamily="monospace"
+        android:text="SETTINGS"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutForSettings"
+        android:layout_width="match_parent"
+        android:layout_height="216dp"
+        android:layout_below="@+id/settingsText"
+        android:layout_centerHorizontal="true"
+        android:background="#afaaaaaa">
+
+        <TextView
+            android:id="@+id/numberOfPlayersText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Number of boards :"
+            android:textColor="@android:color/black" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupForNumberOfBoards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/numberOfPlayersText">
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@android:color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@android:color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/typeOfPlayTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioGroupForNumberOfBoards"
+            android:layout_marginTop="40dp"
+            android:fontFamily="serif"
+            android:text="Type of play :"
+            android:textColor="@android:color/black" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupForTypeOfPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroupForNumberOfBoards"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@id/typeOfPlayTextView">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/black"
+                android:text="Play alone" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/black"
+                android:text="Play with another human player" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/playGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayoutForSettings"
+
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_play_arrow_black_48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playGameButton"
+        android:layout_centerHorizontal="true"
+        android:text="Click button above to proceed" />
+
+</RelativeLayout>

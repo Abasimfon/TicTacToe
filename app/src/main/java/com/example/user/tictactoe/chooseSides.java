@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.example.user.tictactoe;
 
 import android.content.Intent;
@@ -21,33 +22,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class MainActivity extends AppCompatActivity {
+public class chooseSides extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        makingTheButtonClickTakeUsToSecondActivity();
-        makeFullScreen();
+        setContentView(R.layout.activity_choose_sides);
+        onPlayButtonClickListener();
     }
 
-    private void makingTheButtonClickTakeUsToSecondActivity() {
-        //This method helps to set the button listener so that when user clicks the button on first activity it takes him/her to -
-        //activity 2
-        ImageButton imageButton = (ImageButton) findViewById(R.id.progressToActivity2);
-        imageButton.setOnClickListener(new View.OnClickListener() {
+
+    private void onPlayButtonClickListener() {
+        //This method sets a listener on the ImageButton
+        ImageButton progressToGame = (ImageButton) findViewById(R.id.progressToGame);
+        progressToGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, SecondActivity.class));
+                startActivity(new Intent(chooseSides.this, three_boards_player_vs_anotherhumanplayer.class));
             }
         });
     }
 
-    private void makeFullScreen() {
-        //this method makes this activity fullscreen
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-        getSupportActionBar().hide();
-    }
+
 }
